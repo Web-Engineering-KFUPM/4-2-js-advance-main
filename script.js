@@ -2,7 +2,6 @@
 =================================================================
 LAB TITLE: Advance JavaScript
 INSTRUCTIONS:
-• Each task is written as a TODO.
 • Read the TODO description.
 • Use the Console (F12 → Console) to view outputs.
 =================================================================
