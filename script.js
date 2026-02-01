@@ -60,14 +60,21 @@ Task:
 */
 
 // ===================================================================
-// TODO-6: EXCEPTIONS — try/catch/finally with EMPTY ARRAY edge case
+// TODO-6: EXCEPTIONS — try/catch/finally with EMPTY ARRAY observation
 // ===================================================================
 /*
-Task:
-1) Write a function that expects a non-empty array and returns the maximum element of the array.
-2) Intentionally pass an empty array to trigger an error.
-3) Handle the error using try { ... } catch (e) { ... } finally { ... } and log messages
-   in each block so you can see the flow of control.
+
+Task 6.1 (Observation only):
+1) Create an empty array: const arr = [];
+2) Run this line WITHOUT try/catch and observe the error:
+      console.log(arr[0].toString());
+   (Because arr[0] is undefined, calling toString() throws a TypeError.)
+
+Task 6.2:
+  Wrap the SAME risky line inside try/catch/finally:
+   - In try: run console.log(arr[0].toString());
+   - In catch (e): log a message that includes the word "Caught"
+   - In finally: log a message that includes the word "Finally"
 */
 
 // ===================================================================================

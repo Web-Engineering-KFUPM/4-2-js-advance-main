@@ -3,18 +3,23 @@
 ## Overview
 This lab, titled *Advance JavaScript*, is designed to help you practice important concepts beyond the basics of JavaScript. You will complete tasks involving objects with getters and setters, using objects as maps, working with strings and dates, finding min and max values with arrays, handling exceptions, and using regular expressions. Each task includes TODOs and starter code that you must uncomment and complete. The goal is to strengthen your understanding of these core features and prepare you for quizzes and future projects. 
 
-> **Major portions of the quiz will come from the _Reading Assignment_ below. Read carefully!**
+## Instructions
+
+> **Note:**  
+> Please use script.js file to perform TODOs and follow the steps strictly to gain good marks in the assignment.  
+>  
+> **Due Date:** 04 Feb, 2026, **11:59 PM**
+
+---
 
 ## Reading Assignment (zyBooks — Chapter 4 excerpts)
-- **[4.9 Objects](https://learn.zybooks.com/zybook/SWE363Fall2025/chapter/4/section/9)** — How to create objects and pass them to functions.
-- **[4.10 Common object map operations](https://learn.zybooks.com/zybook/SWE363Fall2025/chapter/4/section/10)** — Treating objects as maps and iterating their keys/values.
-- **[Table 4.11.1: Common String methods](https://learn.zybooks.com/zybook/SWE363Fall2025/chapter/4/section/11)** — Reference for string operations used in this lab.
-- **[4.12 Different Date methods](https://learn.zybooks.com/zybook/SWE363Fall2025/chapter/4/section/12)** — Working with dates and time components.
-- **[4.13 Common Math methods](https://learn.zybooks.com/zybook/SWE363Fall2025/chapter/4/section/13)** — Useful numeric helpers (e.g., `Math.min`, `Math.max`, `Math.round`).
-- **[4.14 Exception Handling](https://learn.zybooks.com/zybook/SWE363Fall2025/chapter/4/section/14)** — Throwing and handling errors with `try/catch/finally`.
-- **[4.15 Regular Expressions](https://learn.zybooks.com/zybook/SWE363Fall2025/chapter/4/section/15?content_resource_id=114962149)** — Special characters, character ranges, and metacharacters.
-
-> Links point to zyBooks. Use your course’s book instance to navigate to the exact sections.
+- 4.9 Objects — How to create objects and pass them to functions.
+- 4.10 Common object map operations — Treating objects as maps and iterating their keys/values.
+- Table 4.11.1: Common String methods — Reference for string operations used in this lab.
+- 4.12 Different Date methods — Working with dates and time components.
+- 4.13 Common Math methods — Useful numeric helpers (e.g., `Math.min`, `Math.max`, `Math.round`).
+- 4.14 Exception Handling — Throwing and handling errors with `try/catch/finally`.
+- [4.15 Regular Expressions] — Special characters, character ranges, and metacharacters.
 
 ---
 
@@ -195,18 +200,10 @@ words.forEach(w => {
 - **`for...of`**: Loops over **values** in any **iterable** (arrays, strings, Maps, Sets).  
 - **`array.forEach(callback)`**: Calls your function for each item in the array; very readable for simple “do something for each item” tasks.
 
-**Syntax recap:**
-```js
-for (const key in obj) { /* obj[key] */ }
-for (const value of array) { /* value */ }
-
-array.forEach((value, index) => { /* ... */ });
-```
-
 ---
 
 ## What to Submit
-- Your updated `script.js` with all TODOs completed.
+- Push your updated `script.js` with all TODOs completed.
 - Use `console.log()` to show your results in the browser Console.
 
 ## Checklist
