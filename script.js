@@ -95,19 +95,20 @@ console.log("Max:", Math.max(...nums));
 // ===================================================================
 
 // Task 6.1 (Observation only)
-//const arr = [];
+const arr = [];
 
-// console.log(arr[0].toString()); // Uncomment to observe the error
+// DO NOT run this for submission
+// console.log(arr[0].toString());
 
-// Task 6.2
+// Task 6.2 (Graded)
 try {
-   console.log(arr[0].toString());   // risky line
-}
-catch (e) {
-   console.log("Caught error:", e.message);   // MUST contain "Caught"
+   console.log(arr[0].toString());
+} catch (e) {
+   console.log("Caught:", e.message);      // contains "Caught"
 } finally {
-   console.log("Finally block executed");     // MUST contain "Finally"
+   console.log("Finally:", "done");        // contains "Finally"
 }
+
 
 
 
