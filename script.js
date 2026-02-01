@@ -73,8 +73,8 @@ Task 6.1 (Observation only):
 Task 6.2:
   Wrap the SAME risky line inside try/catch/finally:
    - In try: run console.log(arr[0].toString());
-   - In catch (e): log a message that must includes the word "Caught"
-   - In finally: log a message that must includes the word "Finally"
+   - In catch (e): log a message that MUST includes the word "Caught"
+   - In finally: log a message that MUST includes the word "Finally"
 */
 
 // ===================================================================================
