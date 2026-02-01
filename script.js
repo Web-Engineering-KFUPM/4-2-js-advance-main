@@ -1,92 +1,132 @@
 /* 
 =================================================================
-LAB TITLE: Advance JavaScript
+LAB TITLE: Advanced JavaScript (Reference Solution)
 INSTRUCTIONS:
 • Read the TODO description.
 • Use the Console (F12 → Console) to view outputs.
 =================================================================
 */
 
-//You can uncomment the console.log code to check if your js file is connected with html file or not.
-//console.log("%cJS Lab Connected — Start completing the TODOs for Advance JavaScript!", "font-weight:bold; font-size:14px");
-
 // ==========================
 // TODO-1: OBJECT with GETTERS & SETTERS
 // ==========================
-/*
-Task:
-1) Create an object representing a Student with at least: firstName, lastName, and gpa.
-2) Add a getter fullName that returns "firstName lastName".
-3) Add a setter updateGpa(newGpa) or use a set accessor for gpa that validates 0.0–4.0.
-4) Create an instance/object and output its attributes using the getter(s).
-*/
 
-// ====================================
-// TODO-2: OBJECT AS MAP + for...in LOOP
-// ====================================
-/*
-Task:
-1) Make an object used as a "map" (key → value), e.g., course codes → titles.
-2) Iterate over it with for...in and display each key and value.
-*/
-
-// =========================================
-// TODO-3: STRING OBJECT — charAt() & length
-// =========================================
-/*
-Task:
-1) Create a String object or plain string.
-2) Use .charAt(index) and .length to output characters and size.
-*/
-
-// ===================================
-// TODO-4: DATE — day, month, and year
-// ===================================
-/*
-Task:
-1) Create a Date for the current moment (new Date()).
-2) Find and display the current day of month, month (0–11), and year.
-//    (Hint: getDate(), getMonth(), getFullYear() )
-*/
-
-// ============================================================
-// TODO-5: ARRAY + SPREAD — find MIN and MAX from 10 numbers
-// ============================================================
-/*
-Task:
-1) Declare an array with 10 numbers (any values).
-2) Use spread syntax with Math.min(...) and Math.max(...) to find extremes.
-3) Display both values.
-*/
-
-// ===================================================================
-// TODO-6: EXCEPTIONS — try/catch/finally with EMPTY ARRAY observation
-// ===================================================================
-/*
-
-Task 6.1 (Observation only):
-1) Create an empty array: const arr = [];
-2) Run this line WITHOUT try/catch and observe the error:
-      console.log(arr[0].toString());
-   (Because arr[0] is undefined, calling toString() throws a TypeError.)
-
-Task 6.2:
-  Wrap the SAME risky line inside try/catch/finally:
-   - In try: run console.log(arr[0].toString());
-   - In catch (e): log a message that includes the word "Caught"
-   - In finally: log a message that includes the word "Finally"
-*/
-
-// ===================================================================================
-// TODO-7: REGEX + forEach — find words containing 'ab' and log matches from the list
-// ===================================================================================
-/*
-Task:
-Given: const words = ["ban", "babble", "make", "flab"];
-1) Create a RegExp that detects the substring "ab" anywhere in a word.
-2) Loop with .forEach() and use pattern.test(word) to check matches.
-3) For matches, log "<word> matches!".
-4) Display the words that matches the pattern.
-*/
-
-// End of Advance JavaScript Lab — good luck!
+const student = {
+   firstName: "John",
+   lastName: "Doe",
+   _gpa: 3.0,
+ 
+   get fullName() {
+     return `${this.firstName} ${this.lastName}`;
+   },
+ 
+   get gpa() {
+     return this._gpa;
+   },
+ 
+   set gpa(newGpa) {
+     if (newGpa >= 0.0 && newGpa <= 4.0) {
+       this._gpa = newGpa;
+     } else {
+       console.error("Invalid GPA value");
+     }
+   },
+ 
+   updateGpa(newGpa) {
+     this.gpa = newGpa;
+   }
+ };
+ 
+ console.log("Student Name:", student.fullName);
+ console.log("Student GPA:", student.gpa);
+ student.updateGpa(3.7);
+ console.log("Updated GPA:", student.gpa);
+ 
+ 
+ // ====================================
+ // TODO-2: OBJECT AS MAP + for...in LOOP
+ // ====================================
+ 
+ const courses = {
+   WEB101: "HTML & CSS",
+   WEB201: "JavaScript",
+   WEB301: "Web Engineering"
+ };
+ 
+ console.log("Course List:");
+ for (const code in courses) {
+   console.log(`${code}: ${courses[code]}`);
+ }
+ 
+ 
+ // =========================================
+ // TODO-3: STRING OBJECT — charAt() & length
+ // =========================================
+ 
+ const text = "JavaScript";
+ console.log("String:", text);
+ console.log("Length:", text.length);
+ console.log("First character:", text.charAt(0));
+ console.log("Last character:", text.charAt(text.length - 1));
+ 
+ 
+ // ===================================
+ // TODO-4: DATE — day, month, and year
+ // ===================================
+ 
+ const today = new Date();
+ console.log("Day:", today.getDate());
+ console.log("Month (0-11):", today.getMonth());
+ console.log("Year:", today.getFullYear());
+ 
+ 
+ // ============================================================
+ // TODO-5: ARRAY + SPREAD — find MIN and MAX from 10 numbers
+ // ============================================================
+ 
+ const nums = [5, 12, 3, 99, 42, -7, 18, 0, 27, 8];
+ console.log("Numbers:", nums);
+ console.log("Min:", Math.min(...nums));
+ console.log("Max:", Math.max(...nums));
+ 
+ 
+ // ===================================================================
+ // TODO-6: EXCEPTIONS — try/catch/finally with EMPTY ARRAY observation
+ // ===================================================================
+ 
+ // Task 6.1 (Observation only)
+ const arr = [];
+ // console.log(arr[0].toString()); // Uncomment to observe the error
+ 
+ // Task 6.2
+ try {
+   console.log(arr[0].toString());
+ } catch (e) {
+   console.log("Caught an error:", e.message);
+ } finally {
+   console.log("Finally block executed");
+ }
+ 
+ 
+ // ===================================================================================
+ // TODO-7: REGEX + forEach — find words containing 'ab'
+ // ===================================================================================
+ 
+ const words = ["ban", "babble", "make", "flab"];
+ const pattern = /ab/;
+ 
+ const matches = [];
+ words.forEach(word => {
+   if (pattern.test(word)) {
+     console.log(`${word} matches!`);
+     matches.push(word);
+   }
+ });
+ 
+ console.log("Matched words:", matches);
+ 
+ 
+ // ==========================
+ // End of Lab Reference File
+ // ==========================
+ 
