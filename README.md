@@ -19,7 +19,7 @@ This lab, titled *Advance JavaScript*, is designed to help you practice importan
 - 4.12 Different Date methods — Working with dates and time components.
 - 4.13 Common Math methods — Useful numeric helpers (e.g., `Math.min`, `Math.max`, `Math.round`).
 - 4.14 Exception Handling — Throwing and handling errors with `try/catch/finally`.
-- [4.15 Regular Expressions] — Special characters, character ranges, and metacharacters.
+- 4.15 Regular Expressions — Special characters, character ranges, and metacharacters.
 
 ---
 
