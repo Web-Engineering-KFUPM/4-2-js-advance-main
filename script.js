@@ -96,16 +96,19 @@ const student = {
  
  // Task 6.1 (Observation only)
  const arr = [];
+ console.log(arr[0].toString()); // observe TypeError
+ 
  // console.log(arr[0].toString()); // Uncomment to observe the error
  
  // Task 6.2
  try {
    console.log(arr[0].toString());
  } catch (e) {
-   console.log("Caught an error:", e.message);
+   console.log("Caught error:", e.message);
  } finally {
    console.log("Finally block executed");
  }
+ 
  
  
  // ===================================================================================
